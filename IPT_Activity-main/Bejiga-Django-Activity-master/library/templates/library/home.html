@@ -1,0 +1,58 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+<div class="card">
+    <div class="page-title-section">
+        <h1>📚 Library Management System</h1>
+        <p style="margin-bottom: 0; font-size: 1.15rem; color: #555; font-weight: 300;">
+            Your comprehensive solution for managing libraries, authors, books, and members with ease.
+        </p>
+    </div>
+
+    <h2 style="font-size: 1.6rem; margin-bottom: 2rem; margin-top: 1rem;">🚀 Quick Actions</h2>
+    <div class="quick-actions">
+        <div class="quick-action-card">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🏛️</div>
+            <a href="{% url 'create_library' %}" class="btn" style="width: 100%;">Create Library</a>
+        </div>
+        <div class="quick-action-card">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">✍️</div>
+            <a href="{% url 'create_author' %}" class="btn btn-secondary" style="width: 100%;">Add Author</a>
+        </div>
+        <div class="quick-action-card">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📖</div>
+            <a href="{% url 'create_book' %}" class="btn btn-success" style="width: 100%;">Add Book</a>
+        </div>
+        <div class="quick-action-card">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">👤</div>
+            <a href="{% url 'create_member' %}" class="btn btn-danger" style="width: 100%;">Register Member</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 3.5rem; padding: 2.5rem; background: linear-gradient(135deg, rgba(0, 180, 219, 0.08), rgba(78, 205, 196, 0.08)); border-radius: 20px; border-left: 6px solid #00b4db;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 2rem; color: #00b4db;">💡 System Features</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+            <div style="padding: 1.5rem; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">📚</div>
+                <h3 style="color: #ff6b6b; margin-bottom: 0.5rem; font-size: 1.1rem;">Library Management</h3>
+                <p style="color: #666; font-size: 0.95rem;">Create and manage multiple library locations</p>
+            </div>
+            <div style="padding: 1.5rem; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">👨‍💼</div>
+                <h3 style="color: #4ecdc4; margin-bottom: 0.5rem; font-size: 1.1rem;">Author Database</h3>
+                <p style="color: #666; font-size: 0.95rem;">Track author information and their publications</p>
+            </div>
+            <div style="padding: 1.5rem; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">📖</div>
+                <h3 style="color: #56ab2f; margin-bottom: 0.5rem; font-size: 1.1rem;">Book Inventory</h3>
+                <p style="color: #666; font-size: 0.95rem;">Complete catalog of all books in the system</p>
+            </div>
+            <div style="padding: 1.5rem; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">👥</div>
+                <h3 style="color: #00b4db; margin-bottom: 0.5rem; font-size: 1.1rem;">Member Registry</h3>
+                <p style="color: #666; font-size: 0.95rem;">Maintain detailed member records and activity</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
